@@ -1,0 +1,40 @@
+#Andrew Espinoza
+import time
+print('\n'*2)
+#Name
+nam = input('Name: ')   
+if (len(nam) == 0) or nam.isspace():
+        print('Name cannot be blank') 
+        time.sleep(2)
+elif(len(nam) < 3 ):
+        print('Name too short')
+        time.sleep(2)
+elif not (nam.isalpha()):
+         print('Name must be alphabetic')
+         time.sleep(2)
+#Account
+print('\n'*2)
+acc = input('Account Number:')
+if (len(acc)==0) or acc.isspace():
+        print('Account Number cannot be blank')
+        time.sleep(2)
+elif not (acc.isnumeric()):
+        print('Account Number must be numeric')
+        time.sleep(2)
+elif not(len(acc) == 9):
+        print('Account Number must be 9 digits')    
+        time.sleep(2)
+#Payment    
+print('\n'*2)
+paym = input('Payment:')
+if (len(paym)==0) or paym.isspace():
+        print('Payment cannot be blank')
+        time.sleep(2)
+elif not (paym.isnumeric()):
+         print('Payment must be numeric')
+         time.sleep(2)
+else:
+        pay = float(paym)
+        if (pay <= 0):
+            print('Payment cannot be zero or below zero')
+            time.sleep(2)
