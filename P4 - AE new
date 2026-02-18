@@ -30,11 +30,11 @@ paym = input('Payment:')
 if (len(paym)==0) or paym.isspace():
         print('Payment cannot be blank')
         time.sleep(2)
-elif not (paym.isnumeric()):
-         print('Payment must be numeric')
-         time.sleep(2)
 else:
-        pay = float(paym)
-        if (pay <= 0):
-            print('Payment cannot be zero or below zero')
-            time.sleep(2)
+    pay = float(paym)
+    if (pay == 0 ):
+        print('Payment cannot be zero(0)')
+        time.sleep(2)
+    elif (pay < 0):
+        print('Payment cannot be below zero(0)')
+        time.sleep(2)
