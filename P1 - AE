@@ -1,0 +1,13 @@
+# Andrew Espinoza
+print('Please fill out the form below')
+print('\n'*2)
+fname = input('First Name: ')
+lname = input('Last Name: ')
+address = input('Primary Address: ')
+city = input('City:')
+state = input('State:')
+pcode = input('Postal Code: ')
+print('\n')
+print(fname, lname)
+print(address)
+print(city + ',',state,pcode)
