@@ -18,6 +18,7 @@ def main():
     errd = 0
     line1 = datagenfiles.readline()
     while line1 != '':
+        line1 = line1.strip()
         (idd,nam,grd) = line1.split(',')
         idd = idd.strip()
         nam = nam.strip()
@@ -25,10 +26,10 @@ def main():
         try:
             grd = int(grd)
             if grd > 1000:
-                dataerrorfiles.write(line1)
+                dataerrorfiles.write(line1+',''Points cannot be over 1000'+'\n')
                 errd = errd +1
             elif grd < 0:
-                dataerrorfiles.write(line1)
+                dataerrorfiles.write(line1+',''Points cannot be negative'+'\n')
                 errd = errd +1
             else:
                 if (grd >= 900):
@@ -48,7 +49,7 @@ def main():
                     cntf = cntf + 1
                 datagradfiles.write(idd+', '+nam+', '+str(grd)+', '+grade+'\n')
         except:
-            dataerrorfiles.write(line1)
+            dataerrorfiles.write(line1+',''Points must be numeric'+'\n')
             errd = errd +1
         line1 = datagenfiles.readline()
         recd = recd + 1
