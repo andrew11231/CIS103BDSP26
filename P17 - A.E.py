@@ -41,7 +41,7 @@ def main():
     ans = 'y'
     while ans.lower() == 'y':
         numbers.clear()
-        print('\n1. Poweball\n'
+        print('\n1. Powerball\n'
             '2. Mega Million\n'
             '3. Lucky Day Lotto\n'
             '4. Lotto\n'
