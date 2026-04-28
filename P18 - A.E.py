@@ -14,9 +14,10 @@ def calc():
         kelv = float(kelv)
         if kelv <= 0:
             txt_err.insert(0,'Number cannot be 0 or negative')
+            txt_kel.config(bg='red')
     except:       
            txt_err.insert(0,'Invalid Input') 
-            
+           txt_kel.config(bg='red')
             
             
 #---------labels--------
